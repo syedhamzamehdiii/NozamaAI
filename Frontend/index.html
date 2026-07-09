@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nozama AI - Intelligent E-Commerce Solutions</title>
+    <meta name="description" content="Experience the future of online shopping with AI-powered recommendations, smart search, and personalized customer experiences. Transform your e-commerce business today." />
+    <meta name="author" content="Nozama AI" />
+    <meta name="keywords" content="AI e-commerce, machine learning, online shopping, intelligent recommendations, smart retail, artificial intelligence, digital commerce" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nozama-ai.com/" />
+    <meta property="og:title" content="Nozama AI - Intelligent E-Commerce Solutions" />
+    <meta property="og:description" content="Experience the future of online shopping with AI-powered recommendations, smart search, and personalized customer experiences." />
+    <meta property="og:image" content="/nozama-ai.png" />
+    <meta property="og:site_name" content="Nozama AI" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://nozama-ai.com/" />
+    <meta name="twitter:title" content="Nozama AI - Intelligent E-Commerce Solutions" />
+    <meta name="twitter:description" content="Experience the future of online shopping with AI-powered recommendations, smart search, and personalized customer experiences." />
+    <meta name="twitter:image" content="/nozama-ai.png" />
+    <meta name="twitter:site" content="@nozamaai" />
+    <meta name="twitter:creator" content="@nozamaai" />
+    
+    <!-- Favicon and Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1f2937">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <!-- Theme Color and PWA Support -->
+    <meta name="msapplication-TileColor" content="#1f2937">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#1f2937">
+    
+    <!-- PWA Settings -->
+    <meta name="apple-mobile-web-app-title" content="Nozama AI">
+    <meta name="application-name" content="Nozama AI">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Performance and Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Additional PWA meta tags -->
+    <meta name="apple-mobile-web-app-orientation" content="portrait">
+    <meta name="mobile-web-app-orientation" content="portrait">
+    
+
+  </head>
+  <body>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>This application requires JavaScript to run. Please enable JavaScript in your browser and refresh the page.</p>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <!-- Loading state while React app loads -->
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker Registration (for PWA) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
